@@ -1,0 +1,26 @@
+<input type="button" id="loadFileXml" value="Select" onclick="document.getElementById('file').click();" />
+
+<input type="file" class="file-input"
+style="display:none;"
+id="file" name="file"
+       [accept]="requiredFileType"
+       (change)="onFileSelected($event)" #fileUpload>
+
+<div class="file-upload">
+
+
+   {{file || "No file uploaded yet."}}
+  
+
+    <button class="upload-btn"
+      (click)="click()">
+        send
+    </button>
+    
+  
+
+</div>
+
+
+
+
